@@ -4,7 +4,7 @@ const cohortSchema = new Schema(
   {
     slug: {
       type: String,
-      required: true,
+      required: [true, "Slug is required"],
     },
     name: {
       type: String,
@@ -16,18 +16,18 @@ const cohortSchema = new Schema(
       required: [true, "Description is required"],
       trim: true,
     },
-    thumbnail: {
-      type: String,
-      required: [true, "Thumbnail is required"],
-    },
+    // thumbnail: {
+    //   type: String,
+    //   required: [true, "Thumbnail is required"],
+    // },
     price: {
       type: Number,
       required: true,
     },
-    status: {
-      type: Boolean,
-      required: true,
-    },
+    // status: {
+    //   type: Boolean,
+    //   required: true,
+    // },
   },
   {
     timestamps: true,
